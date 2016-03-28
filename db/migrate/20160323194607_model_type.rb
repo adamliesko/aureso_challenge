@@ -4,7 +4,7 @@ class ModelType < ActiveRecord::Migration
       t.string :name
       t.string :model_type_slug
       t.string :model_type_code
-      t.decimal :base_price
+      t.integer :base_price
       t.integer :model_id
 
       t.timestamps null: false
