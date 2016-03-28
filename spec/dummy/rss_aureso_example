@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <rss version="2.0">
+<channel>
+<title>Aureso RSS Feed</title>
+    <link>http://www.aureso.net/1</link>
+    <description>Super cool decs</description>
+<language>en</language>
+<item>
+<title>Aureso RSS Feed</title>
+    <link>http://www.aureso.net/2</link>
+    <description>Super cooler decs</description>
+<language>en</language>
+</item>
+<item>
+<title>Aureso RSS Feed</title>
+    <link>http://www.aureso.net/3</link>
+    <description>Super coolest decs</description>
+<language>en</language>
+<pubDate>Today</pubDate>
+</item>
+  </channel>
+</rss>
