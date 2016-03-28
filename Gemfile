@@ -16,6 +16,8 @@ group :test do
   gem 'rspec-rails'
   gem 'rspec-its'
   gem 'webmock'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
 end
 
 gem 'simplecov', require: false, group: :test

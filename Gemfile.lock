@@ -40,6 +40,11 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.5)
     erubis (2.7.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     foreigner (1.7.4)
       activerecord (>= 3.0.0)
     friendly_id (5.1.0)
@@ -114,6 +119,8 @@ GEM
     rspec-support (3.3.0)
     rufus-scheduler (3.2.0)
     safe_yaml (1.0.4)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
     simplecov (0.10.0)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -144,6 +151,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (~> 2.1)
+  factory_girl_rails
   foreigner (= 1.7.4)
   friendly_id (~> 5.1)
   jbuilder (~> 2.0)
@@ -157,6 +165,7 @@ DEPENDENCIES
   rspec-its
   rspec-rails
   rufus-scheduler (~> 3.2)
+  shoulda-matchers
   simplecov
   spring (~> 1.6)
   webmock
