@@ -18,6 +18,8 @@ group :test do
   gem 'webmock'
 end
 
+gem 'simplecov', require: false, group: :test
+
 group :development do
   gem 'better_errors', '~> 2.1'
   gem 'spring', '~> 1.6'
