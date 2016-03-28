@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160323194607) do
     t.string   "name"
     t.string   "model_type_slug"
     t.string   "model_type_code"
-    t.decimal  "base_price"
+    t.integer  "base_price"
     t.integer  "model_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -55,5 +55,4 @@ ActiveRecord::Schema.define(version: 20160323194607) do
   add_foreign_key "model_types", "models", name: "model_types_model_id_fk"
 
   add_foreign_key "models", "organizations", name: "models_organization_id_fk"
-
 end
