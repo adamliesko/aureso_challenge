@@ -1,0 +1,2 @@
+class ShowRoom < Organization
+end

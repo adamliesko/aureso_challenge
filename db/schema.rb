@@ -11,48 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160323194607) do
-
+ActiveRecord::Schema.define(version: 20_160_323_194_607) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "model_types", force: true do |t|
-    t.string   "name"
-    t.string   "model_type_slug"
-    t.string   "model_type_code"
-    t.integer  "base_price"
-    t.integer  "model_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+  create_table 'model_types', force: true do |t|
+    t.string 'name'
+    t.string 'model_type_slug'
+    t.string 'model_type_code'
+    t.integer 'base_price'
+    t.integer 'model_id'
+    t.datetime 'created_at',      null: false
+    t.datetime 'updated_at',      null: false
   end
 
-  add_index "model_types", ["model_type_code"], name: "index_model_types_on_model_type_code", using: :btree
-  add_index "model_types", ["model_type_slug"], name: "index_model_types_on_model_type_slug", using: :btree
+  add_index 'model_types', ['model_type_code'], name: 'index_model_types_on_model_type_code', using: :btree
+  add_index 'model_types', ['model_type_slug'], name: 'index_model_types_on_model_type_slug', using: :btree
 
-  create_table "models", force: true do |t|
-    t.string   "name"
-    t.string   "model_slug"
-    t.integer  "organization_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+  create_table 'models', force: true do |t|
+    t.string 'name'
+    t.string 'model_slug'
+    t.integer 'organization_id'
+    t.datetime 'created_at',      null: false
+    t.datetime 'updated_at',      null: false
   end
 
-  add_index "models", ["model_slug"], name: "index_models_on_model_slug", using: :btree
+  add_index 'models', ['model_slug'], name: 'index_models_on_model_slug', using: :btree
 
-  create_table "organizations", force: true do |t|
-    t.string   "name"
-    t.string   "public_name"
-    t.string   "type"
-    t.string   "pricing_policy"
-    t.string   "auth_token"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+  create_table 'organizations', force: true do |t|
+    t.string 'name'
+    t.string 'public_name'
+    t.string 'type'
+    t.string 'pricing_policy'
+    t.string 'auth_token'
+    t.datetime 'created_at',     null: false
+    t.datetime 'updated_at',     null: false
   end
 
-  add_index "organizations", ["auth_token"], name: "index_organizations_on_auth_token", using: :btree
+  add_index 'organizations', ['auth_token'], name: 'index_organizations_on_auth_token', using: :btree
 
   Foreigner.load
-  add_foreign_key "model_types", "models", name: "model_types_model_id_fk"
+  add_foreign_key 'model_types', 'models', name: 'model_types_model_id_fk'
 
-  add_foreign_key "models", "organizations", name: "models_organization_id_fk"
+  add_foreign_key 'models', 'organizations', name: 'models_organization_id_fk'
 end
