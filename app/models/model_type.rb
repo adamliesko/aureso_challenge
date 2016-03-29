@@ -14,8 +14,12 @@ class ModelType < ActiveRecord::Base
 
   def self.with_custom_price(organization, opts)
     model_type = organization.model_types.with_model_slug(opts[:model_slug]).with_model_type_slug(opts[:model_type_slug]).first
-    model_type.base_price = opts[:base_price] # don't save the base price, in this case, use it as a per request attribute
-    model_type
+    if model_type
+      model_type.base_price = opts[:base_price] # don't save the base price, in this case, use it as a per request attribute
+      model_type
+    else
+      fail ActiveRecord::RecordNotFound
+    end
   end
 
   def total_price

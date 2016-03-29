@@ -1,7 +1,9 @@
 require 'webmock/rspec'
 require 'simplecov'
+require 'coveralls'
 
 SimpleCov.start 'rails'
+Coveralls.wear!
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

@@ -21,6 +21,7 @@ group :test do
 end
 
 gem 'simplecov', require: false, group: :test
+gem 'coveralls', require: false
 
 group :development do
   gem 'better_errors', '~> 2.1'

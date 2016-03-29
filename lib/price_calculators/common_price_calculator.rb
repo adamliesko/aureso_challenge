@@ -17,9 +17,10 @@ module PriceCalculators
     end
 
     def cached_margin
+      klazz = self.class
       @@cached_margins ||= {}
-      @@cached_margins[self.class] ||= self.class.margin
-      @@cached_margins[self.class]
+      @@cached_margins[klazz] ||= klazz.margin
+      @@cached_margins[klazz]
     end
 
     def self.clear_cache
