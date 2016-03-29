@@ -1,5 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/adamliesko/aureso_challenge.png)](https://codeclimate.com/github/adamliesko/aureso_challenge)
 [![Build Status](https://travis-ci.org/adamliesko/aureso_challenge.png)](https://travis-ci.org/adamliesko/aureso_challenge)
+[![Coverage Status](https://coveralls.io/repos/github/adamliesko/aureso_challenge/badge.svg?branch=master)](https://coveralls.io/github/adamliesko/aureso_challenge?branch=master)
 
 Aureso Challenge
 ===============================
@@ -15,7 +16,7 @@ Aureso Challenge
 
 - As discussed, I implemented caching for PricingPolicy. On every startup of the Rails App in prod environment new values are fetched. Additionally, cached margins
 are updated in 1h intervals through the use of rufus scheduler.
-- Used HTTP Authentication for both defined endpoints, tied to the Organization. Set HTTP Header `Authorization` to the auth_code of your Organization.
+- Used HTTP Authentication for both defined endpoints, tied to the Organization. Set HTTP Header `Authorization` to the auth_code of your Organization (see specs for more details).
 - Business constraints related to the slugs or names we open ended - so I assumed they should be always present, set by the user creating them (not auto generated) and unique.
 
 ## Development setup
