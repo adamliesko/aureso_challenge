@@ -13,7 +13,7 @@ Aureso Challenge
 - Time Limit: 7 working days
 
 ## Notes
-
+- Use of relational database (SQL) - PostgreSQL. No reason for anything fancier, Postgres is battle-tested and the domain model fits relational concept 100%. 
 - As discussed, I implemented caching for PricingPolicy. On every startup of the Rails App in prod environment new values are fetched. Additionally, cached margins
 are updated in 1h intervals through the use of rufus scheduler.
 - Used HTTP Authentication for both defined endpoints, tied to the Organization. Set HTTP Header `Authorization` to the auth_code of your Organization (see specs for more details).
