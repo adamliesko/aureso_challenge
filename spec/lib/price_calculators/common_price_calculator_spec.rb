@@ -20,7 +20,7 @@ describe PriceCalculators::CommonPriceCalculator do
     stub_parsers
 
     PriceCalculators::CommonPriceCalculator.update_cached_values
-    allow(ContentParsers::HTMLParser).to receive(:get_content).and_return('status status a status status') #change parser outcome
+    allow(ContentParsers::HTMLParser).to receive(:get_content).and_return('status status a status status') # change parser outcome
     PriceCalculators::CommonPriceCalculator.update_cached_values
 
     expect(PriceCalculators::FixedPriceCalculator.margin).to eq(4)
