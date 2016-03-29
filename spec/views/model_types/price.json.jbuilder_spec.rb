@@ -10,6 +10,6 @@ RSpec.describe 'model_types/price.json.jbuilder' do
 
     response_hash = JSON.parse(rendered)
 
-    expect(response_hash).to eq ({ 'model_type' => { 'name' => 'bmw_11', 'base_price' => 10_000, 'total_price' => 10_500 } })
+    expect(response_hash).to eq ({ 'model_type' => { 'name' => mt.name, 'base_price' => 10_000, 'total_price' => 10_500 } })
   end
 end
